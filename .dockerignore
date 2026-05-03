@@ -1,0 +1,8 @@
+venv_gpu
+__pycache__
+*.pyc
+notebooks
+data
+.git
+.gitignore
+README.md
