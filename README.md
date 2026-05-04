@@ -1,68 +1,64 @@
-# AI-Powered Clinical Decision Support System
+# 🧠 AI Clinical Decision Support System
 
-## Overview
+## 🚀 Overview
+This project presents an AI-powered Clinical Decision Support System (CDSS) that combines Machine Learning with structured insight generation to provide intelligent health risk predictions and actionable recommendations.
 
-This project presents an AI-based Clinical Decision Support System that predicts diabetes using machine learning and provides human-readable explanations using a hybrid LLM approach.
+The system predicts diabetes risk based on patient data and enhances interpretability by generating human-readable insights, risk levels, and recommendations through an interactive dashboard.
 
-## Features
+---
 
-* Machine Learning Model (Logistic Regression & Random Forest)
-* Model Evaluation (Accuracy, Precision, Recall, F1-score)
-* Explainable AI (Feature Importance)
-* Hybrid LLM Integration (LLM + fallback)
-* REST API using Flask
-* Docker-based Deployment
+## 🎯 Objectives
+- Predict diabetes using a trained ML model
+- Provide risk scoring and classification
+- Generate interpretable clinical insights
+- Visualize results through an interactive dashboard
 
-## Architecture
+---
 
-User Input → Flask API → ML Model → Explanation Layer → Response
+## 🧠 System Architecture
 
-## API Endpoints
+User Input → ML Model → Risk Analysis → Insight Generation → Dashboard
 
-### 1. Home
+---
 
-GET /
+## ⚙️ Tech Stack
 
-* Returns API status
+- Python
+- Flask (API)
+- Scikit-learn (ML Model)
+- Streamlit (Dashboard)
+- Docker (Containerization)
 
-### 2. Prediction
+---
 
-POST /predict
+## 🔍 Features
 
-#### Input JSON
+- Diabetes prediction using ML
+- Risk scoring (Low / Medium / High)
+- Clinical insights generation
+- Actionable health recommendations
+- Feature contribution visualization
+- Interactive dashboard
 
-{
-"Pregnancies": 2,
-"Glucose": 150,
-"BloodPressure": 80,
-"SkinThickness": 25,
-"Insulin": 100,
-"BMI": 30,
-"DiabetesPedigree": 0.5,
-"Age": 45
-}
+---
 
-#### Output
+## 📊 Sample Output
 
-{
-"prediction": 1,
-"explanation": "Patient is likely diabetic..."
-}
+- Prediction: Diabetic / Non-Diabetic
+- Risk Level: Low / Medium / High
+- Insights: Generated explanation of patient condition
+- Recommendations: Personalized suggestions
 
-## Docker Usage
+---
 
-### Pull Image
+## 🧠 Key Contribution
 
-docker pull kabileshwar/clinical-ai
+This system bridges the gap between prediction and decision-making by transforming raw ML outputs into structured, interpretable insights, improving usability and practical application in healthcare systems.
 
-### Run Container
+---
 
-docker run -p 5000:5000 kabileshwar/clinical-ai
+## ▶️ How to Run
 
-## SDG Alignment
-
-This project aligns with **SDG 3: Good Health and Well-being** by assisting early diagnosis of diabetes.
-
-## Author
-
-Kabileshwar
+### Backend (Flask API)
+```bash
+python src/app.py
